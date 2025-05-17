@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pancetta</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-image: url('https://files.catbox.moe/mj4fgu.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            cursor: url('https://files.catbox.moe/uzv7dn.png'), auto; /* Apply custom cursor to the entire body */
+        }
+
+        .logo-button {
+            background-color: transparent;
+            border: none;
+            cursor: url('https://files.catbox.moe/uzv7dn.png'), auto; /* Apply custom cursor to the button too */
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            max-width: 200px;
+            max-height: 200px;
+            animation: spin 4s linear infinite, bounce 2s ease-in-out infinite alternate;
+            display: block;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <button class="logo-button" onclick="window.location.href='https://www.mediafire.com/file/mnarc7sffk94i5n/BaconTwo+Builds.rar/file';">
+        <img src="https://files.catbox.moe/pyw2yj.png" alt="Logo" class="logo">
+    </button>
+    <script>
+        window.addEventListener('resize', function() {
+            const logo = document.querySelector('.logo');
+            const maxWidth = Math.min(200, window.innerWidth * 0.3);
+            const maxHeight = Math.min(200, window.innerHeight * 0.3);
+
+            logo.style.maxWidth = maxWidth + 'px';
+            logo.style.maxHeight = maxHeight + 'px';
+        });
+    </script>
+</body>
+</html>
